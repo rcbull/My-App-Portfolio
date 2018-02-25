@@ -1,2 +1,3 @@
-# My-App-Portfolio
-Udacity My App Portfolio
+# My App Portfolio
+Udacity Nanodegree - nd801
+
