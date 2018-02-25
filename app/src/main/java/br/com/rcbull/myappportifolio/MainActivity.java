@@ -5,6 +5,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity
         extends AppCompatActivity
@@ -38,38 +39,53 @@ public class MainActivity
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.spotify_button:
-                mySnackbar(R.string.spotify);
+                //mySnackbar(R.string.spotify);
+                showToast(R.string.spotify);
                 break;
             case R.id.score_button:
-                mySnackbar(R.string.score);
+                //mySnackbar(R.string.score);
+                showToast(R.string.score);
                 break;
             case R.id.library_button:
-                mySnackbar(R.string.library);
+                //mySnackbar(R.string.library);
+                showToast(R.string.library);
                 break;
             case R.id.bigger_button:
-                mySnackbar(R.string.bigger);
+                //mySnackbar(R.string.bigger);
+                showToast(R.string.bigger);
                 break;
             case R.id.reader_button:
-                mySnackbar(R.string.reader);
+                //mySnackbar(R.string.reader);
+                showToast(R.string.reader);
                 break;
             case R.id.capstone_button:
-                mySnackbar(R.string.capstone);
+                //mySnackbar(R.string.capstone);
+                showToast(R.string.capstone);
                 break;
             default:
-                throw new IllegalArgumentException("Something strange happened");
+                throw new IllegalArgumentException("Fail to launch app name!");
         }
     }
 
     /**
-     * Creates a common Snackbar implementation
+     * Creates a Snackbar implementation
      *
      * @param i string of the title of the app project
      */
     private void mySnackbar(int i) {
         Snackbar
                 .make(this.findViewById(android.R.id.content),
-                        "This will open " + getResources().getString(i),
+                        "This button will launch my " + getResources().getString(i),
                         Snackbar.LENGTH_SHORT)
                 .show();
+    }
+
+    /**
+     * Creates a toast implementation
+     * @param appName
+     */
+    private void showToast(int appName) {
+        String toastMsg = "This button will launch my " + getResources().getString(appName) + "!";
+        Toast.makeText(MainActivity.this, toastMsg, Toast.LENGTH_SHORT).show();
     }
 }

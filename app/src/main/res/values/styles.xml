@@ -8,7 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <!-- Common theme for the first 5 project buttons -->
+    <!-- Common theme for buttons -->
     <style name="StandardButton">
         <item name="colorButtonNormal">@color/standard_button_background</item>
         <item name="android:textColor">@android:color/white</item>
